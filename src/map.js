@@ -6,20 +6,20 @@ var markers = [];
 function initMap() {
   // Constructor creates a new map - only center and zoom are required.
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.7413549, lng: -73.9980244},
-    zoom: 13,
+    center: {lat: 30.260857, lng: -97.744446},
+    zoom: 11,
     mapTypeControl: false
   });
 
   // These are the real estate listings that will be shown to the user.
   // Normally we'd have these in a database instead.
   var locations = [
-    {title: 'Park Ave Penthouse', location: {lat: 40.7713024, lng: -73.9632393}},
-    {title: 'Chelsea Loft', location: {lat: 40.7444883, lng: -73.9949465}},
-    {title: 'Union Square Open Floor Plan', location: {lat: 40.7347062, lng: -73.9895759}},
-    {title: 'East Village Hip Studio', location: {lat: 40.7281777, lng: -73.984377}},
-    {title: 'TriBeCa Artsy Bachelor Pad', location: {lat: 40.7195264, lng: -74.0089934}},
-    {title: 'Chinatown Homey Space', location: {lat: 40.7180628, lng: -73.9961237}}
+    {title: 'Lady Bird Lake', location: {lat: 30.248193, lng: -97.718150}},
+    {title: 'Chi\'Lantro', location: {lat: 30.3525408, lng: -97.7235331}},
+    {title: 'Pinthouse Pizza', location: {lat: 30.3187536, lng: -97.7412484}},
+    {title: 'HomeAway', location: {lat: 30.404706, lng: -97.7237239}},
+    {title: 'Alamo Drafthouse Mueller', location: {lat: 30.2984536, lng: -97.7067097}},
+    {title: 'The University of Texas at Austin', location: {lat: 30.2849185, lng: -97.7362507}}
   ];
 
   var largeInfowindow = new google.maps.InfoWindow();
