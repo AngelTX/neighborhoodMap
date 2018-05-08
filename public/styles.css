@@ -1,47 +1,64 @@
-html,
-body {
-  font-family: Arial, sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+.app_title {
+    padding: 15px 5px 10px 5px;
 }
 
-.container {
-  height: 100%;
-  position: relative;
+.sidebar_width {
+    min-width: 250px;
 }
 
-input {
-  font-size: 12px;
+.sidebar_hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgb(255, 255, 255);
 }
 
-h1 {
-  color: #525454;
-  font-size: 22px;
-  margin: 0 0 10px 0;
-  text-align: center;
+.location_list {
+    padding: 3px 5px 5px 5px;
 }
 
-#hide-listings,
-#show-listings {
-  width: 48%;
+.iw_title {
+    font-size: 1.3em;
 }
 
-#map {
-  bottom:0px;
-  height: 100%;
-  left: 362px;
-  position: absolute;
-  right: 0px;
+.iw_subtitle {
+    font-size: 1em;
 }
 
-.options-box {
-  background: #fff;
-  border: 1px solid #999;
-  border-radius: 3px;
-  height: 100%;
-  line-height: 35px;
-  padding: 10px 10px 30px 10px;
-  text-align: left;
-  width: 340px;
+.iw_address_title {
+    margin-bottom: 2px;
+    font-size: .95em;
+}
+
+.iw_address {
+    margin-bottom: 0;
+    font-size: .9em;
+}
+
+.padding-zero {
+    padding: 0 0 0 0;
+}
+
+.padding-sides-10 {
+    padding: 0 10px 0 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: .9em;
+}
+
+@media (max-width: 768px) {
+    .search {
+        font-size: .7em;
+        margin-top: 5px;
+    }
+}
+
+.map_error {
+    color: white;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
 }

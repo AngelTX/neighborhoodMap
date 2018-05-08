@@ -1,32 +1,65 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="public/styles.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="options-box">
-        <h1>Find Your New NYC Home</h1>
-        <div>
-          <input id="show-listings" type="button" value="Show Listings">
-          <input id="hide-listings" type="button" value="Hide Listings">
+</head>
+
+<body>
+
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+          <nav class="col-2 collapse bg-inverse pt-2 h-100 sidebar_width" id="sidebar">
+              <h4 class="app_title text-white">Austin Tx</h4>
+              <!-- Search Input -->
+              <input class="search" data-bind="textInput: searchOption, valueUpdate: 'afterkeydown'" placeholder="Search Locations...">
+              <hr class="sidebar_hr">
+              <ul class="nav flex-column" data-bind="foreach: myLocationsFilter">
+                  <a href="#"><li class="nav-item text-white location_list" data-bind="text: title, click: $parent.populateAndBounceMarker"></li></a>
+              </ul>
+          </nav>
+            <main class="col p-0 navbar-inverse">
+                <a href class="float-left m-3 navbar-light" data-target="#sidebar" data-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <div class="content bg-inverse">
+                    <!-- Map Content -->
+                    <div id="map">
+                        <!-- Map -->
+                        <p class="map_error"></p>
+                    </div>
+                </div>
+            </main>
+
         </div>
-      </div>
-
-      <div id="map"></div>
-
     </div>
 
-
-    <!-- all of my scripts -->
-    <script src="src/knockout-3.4.2.js" charset="utf-8"></script>
-    <script src="src/map.js"></script>
-
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous">
+    </script>
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
+    </script>
+    <script
+        src="src/locations.js" charset="utf-8">
+    </script>
+    <script
+        src="src/knockout-3.4.2.js" charset="utf-8">
+    </script>
+    <script
+    src="src/googleMaps.js" charset="utf-8">
+    </script>
     <script async defer
-        src=
-        "https://maps.googleapis.com/maps/api/js?key=AIzaSyCxluVJoQmzZAzEhu31xE-m7fR8Rbc8Cy4&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxluVJoQmzZAzEhu31xE-m7fR8Rbc8Cy4&callback=startApp"
+        onerror="googleError()">
     </script>
 
-  </body>
+</body>
 </html>
