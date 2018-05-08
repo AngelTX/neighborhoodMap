@@ -75,11 +75,11 @@ function AppViewModel() {
         }).bind(this), 1400);
     };
 
-    this.initMap = function() {
+    initMap = () => {
         var mapAustin = document.getElementById('map');
         var mapOptions = {
-            center: new google.maps.LatLng(30.260857, -97.744446),
-            zoom: 11,
+            center: new google.maps.LatLng(30.316056, -97.724944),
+            zoom: 12,
         };
 
     // Constructor creates a new map - only center and zoom are required.
@@ -111,7 +111,7 @@ function AppViewModel() {
         }
     };
 
-    this.initMap();
+    initMap();
 
     // This block appends our locations to a list using data-bind
     this.myLocationsFilter = ko.computed(function() {
