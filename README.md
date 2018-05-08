@@ -11,3 +11,8 @@
 * bootstrap v4
 * HTML
 * JavaScript
+
+# APIs Used:
+
+* Google maps
+* Foursquare
