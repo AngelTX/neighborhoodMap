@@ -2,7 +2,8 @@
 
 ## Getting Started
 
-* Visit the following URL: https://angeltx.github.io/neighborhoodMap/
+* Visit the following URL: https://angeltx.github.io/neighborhoodMap/; or,
+* Clone/Download this repository onto your local machine, and visit index.html on your favorite browser.
 * Explore some of my favorite places in Austin, Tx!
 
 ## Technology Used:
